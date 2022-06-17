@@ -27,7 +27,7 @@ const Logout = () => {
 
     useEffect(() => {
         logout();
-    }, []);
+    });
 
     return (
         <div>

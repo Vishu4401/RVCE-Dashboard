@@ -1,0 +1,11 @@
+[0;1;31m●[0m mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; disabled; vendor preset: enabled)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Tue 2022-05-17 10:52:01 IST; 14s ago
+       Docs: https://docs.mongodb.org/manual
+   Main PID: 23737 (code=exited, status=2)
+
+May 17 10:52:01 vishwanath-Inspiron-3558 systemd[1]: Started MongoDB Database Server.
+May 17 10:52:01 vishwanath-Inspiron-3558 systemd[1]: [0;1;39m[0;1;31m[0;1;39mmongod.service: Main process exited, code=exited, status=2/INVALIDARGUMENT[0m
+May 17 10:52:01 vishwanath-Inspiron-3558 mongod[23737]: Error opening config file '/etc/mongod.conf': No such file or directory
+May 17 10:52:01 vishwanath-Inspiron-3558 mongod[23737]: try '/usr/bin/mongod --help' for more information
+May 17 10:52:01 vishwanath-Inspiron-3558 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mmongod.service: Failed with result 'exit-code'.[0m

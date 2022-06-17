@@ -56,8 +56,8 @@ const Login = () => {
                 <div className="row">
                     <div className="col-md-5 d-flex flex-column align-items-center 
                         text-white justify-content-center form">
-                        <h1 className="display-4 fw-bolder">Welcome Back</h1>
-                        <p className="lead text-center">Enter your Credentials to Loign</p>
+                        <h1 className="display-4 fw-bolder">Welcome Back!</h1>
+                        <p className="lead text-center">Enter your Credentials to Login</p>
                         <h5 className="mb-4">OR</h5>
                         <NavLink to="/register" className = "btn btn-outline-light rounded-pill pb-2 w-50">
                             Register
