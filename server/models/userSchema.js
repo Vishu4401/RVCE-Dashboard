@@ -4,13 +4,25 @@ const jwt = require("jsonwebtoken");
 
 // User Schema or Document Structure
 const userSchema = new mongoose.Schema({
-  username: {
+  firstname: {
+    type: String,
+    required: true,
+    unique: false,
+  },
+
+  lastname: {
+    type: String,
+    required: true,
+    unique: false,
+  },
+
+  email: {
     type: String,
     required: true,
     unique: true,
   },
 
-  email: {
+  phone: {
     type: String,
     required: true,
     unique: true,

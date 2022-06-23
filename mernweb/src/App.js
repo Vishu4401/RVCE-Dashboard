@@ -13,6 +13,7 @@ import Dashboard from "./components/Dashboard";
 import Logout from "./components/Logout";
 import Protectedroute from "./components/ProtectedRoute";
 import Notes from "./components/Notes";
+
 // import AddNotesFile from "./components/AddNotesFile";
 
 function App() {
@@ -59,6 +60,9 @@ function App() {
         <Route exact path="/notes" component={Notes} />
 
         <Protectedroute exact path="/login" component={Login} auth={auth1} />
+        {/* <Protectedroute exact path="/adduser" component={AddUser} auth={auth1} />
+        <Protectedroute exact path="/edituser" component={EditUser} auth={auth1} />
+        <Protectedroute exact path="/list" component={List} auth={auth1}/> */}
         <Protectedroute
           exact
           path="/register"

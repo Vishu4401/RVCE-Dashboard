@@ -35,7 +35,7 @@ const Login = () => {
                 })
             });
 
-            if(res.status === 400 || !res){
+            if(res.status === 400 && !res){
                 window.alert("Invalid Credentials")
             }else{
                 window.alert("Login Successful");
@@ -105,14 +105,14 @@ const Login = () => {
                                 />                               
                             </div>
 
-                            <div className="mb-3 form-check">
+                            {/* <div className="mb-3 form-check">
                                 <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
                                     <label className="form-check-label" for = "exampleCheck1">
                                         Remember me
                                     </label>
                     
 
-                            </div>
+                            </div> */}
 
                         <button type="submit" className="btn btn-primary w-100 mt-4 rounded-pill">
                             Login

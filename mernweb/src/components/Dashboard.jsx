@@ -14,7 +14,7 @@ const Dashboard = () => {
             <div className="container my-5 py-5">
               <div className="row mb-5">
                 <div className="col-12">
-                  <h3 className="fs-5 text-center mb-0">Notes Section</h3>
+                  <h3 className="fs-5 text-center mb-0">Resources available</h3>
                   <hr className="w-25 mx-auto" />
                 </div>
               </div>

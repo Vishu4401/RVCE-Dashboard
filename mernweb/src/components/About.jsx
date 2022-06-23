@@ -17,8 +17,8 @@ const About = () => {
               </h1>
               <hr className="w-50" />
               <p className="lead mb-4">
-                <b>NoteStore</b> is a web application to help the students
-                through faculty and has been since 2021. Our notes are crafted
+                <b>RVCE Dashboard</b> is a web application to help the students
+                through faculty and has been since 2022. Our notes are crafted
                 by the faculties of the organization.
               </p>
               <NavLink

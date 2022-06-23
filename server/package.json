@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "proxy": "http://localhost:5000/",
+  "proxy": "http://localhost:3001/",
   "main": "server.js",
   "homepage": "http://Vishu4401.github.io/Notestore",
   "scripts": {

@@ -20,7 +20,7 @@ class Notes extends React.Component {
               <div className="container my-5 py-5">
                 <div className="row mb-5">
                   <div className="col-12">
-                    <h3 className="fs-5 text-center mb-0">Notes Section</h3>
+                    <h3 className="fs-5 text-center mb-0">Resources available</h3>
                     <hr className="w-25 mx-auto" />
                   </div>
                 </div>
@@ -83,3 +83,58 @@ class Notes extends React.Component {
 // ReactDOM.render(<Notes/>, document.body);
 
 export default Notes;
+
+
+// import React from "react";
+// import axios from 'axios';
+
+
+// const Notes = ({files, setFiles, removeFiles}) => {
+//   const uploadHandler = (event) => {
+//     const file = event.target.files[0];
+    
+//     if(!file) return;
+//     file.isUploading = true;
+//     setFiles([...files, file])
+
+//     //Upload File
+//     const formData = new FormData();
+//     formData.append(
+//       "newFile", file, file.name
+//     )
+
+//     axios.post('http://localhost:3000/notes', formData)
+//       .then((res) => {
+//         file.isUploading = false;
+//         setFiles([...files, file])
+//       })
+//       .catch((err) => {
+//         console.error(err)
+//         // removeFile(file.name)
+//       });
+//   }
+
+//   return(
+//     <>
+//     <div className="col-md-9 center">
+//       <div className="file-card">
+//         <div className="file-inputs">
+//           <input type="file" onChange = {uploadHandler} />
+//           <button>
+//             <i>
+//               Upload
+//             </i>
+//           </button>
+//         </div>
+
+//         <p className="main">Supported Files</p>
+//         <p className="info">PDF, JPG, PNG</p>
+
+//       </div>
+//     </div>
+//     </>
+//   )
+
+// }
+
+// export default Notes;

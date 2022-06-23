@@ -10,15 +10,15 @@ const expressupload = require("express-fileupload");
 const app = express();
 
 // Configure ENV File & Require Connection File
-// dotenv.config({ path: './config.env' });
-// require('./db/conn');
-// const port = process.env.PORT;
+dotenv.config({ path: './config.env' });
+require('./db/conn');
+const port = process.env.PORT;
 
 // mongoose.connect('moogodb://localhost:27017/RV_Dashboard')
-mongoose.connect("mongodb://127.0.0.1:27017/RV_Dashboard")
-.then(() => {
-  console.log("MongoDB is connected.......");
-});
+// mongoose.connect("mongodb://127.0.0.1:27017/RV_Dashboard")
+// .then(() => {
+//   console.log("MongoDB is connected.......");
+// });
 
 // Require Model
 const Users = require("./models/userSchema");
@@ -45,13 +45,17 @@ app.get("/", (req, res) => {
 app.post("/register", async (req, res) => {
   try {
     // Get Body or Data
-    const username = req.body.username;
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
     const email = req.body.email;
+    const phone = req.body.phone;
     const password = req.body.password;
 
     const createUser = new Users({
-      username: username,
+      firstname: firstname,
+      lastname: lastname,
       email: email,
+      phone: phone,
       password: password,
     });
 
@@ -142,7 +146,7 @@ app.post("/addnotesfile", (req, res) => {
       const filename = file.name;
       // console.log(filename);
 
-      file.mv(__dirname + "/fileuploads" + filename, function (err) {
+      file.mv(__dirname + "/RVDocs-" + filename, function (err) {
         if (err) {
           console.log(err);
         } else {
@@ -166,9 +170,9 @@ app.get("/logout", (req, res) => {
 app.get("/auth", authenticate, (req, res) => {});
 
 // Run server
-// app.listen(port, () => {
-//   console.log("Server is Listening");
-// });
+app.listen(port, () => {
+  console.log("Server is Listening");
+});
 
 // Our backend is done and store data in Database
 // Connect FrontEnd with BackEnd

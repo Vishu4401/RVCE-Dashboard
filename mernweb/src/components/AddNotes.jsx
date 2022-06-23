@@ -41,7 +41,7 @@ const AddNotes = () => {
       });
 
       if (res.status === 400 || !res) {
-        window.alert("Already used details");
+        window.alert("Data already exists!");
       } else {
         // Server must be started for Proxy to work
         window.alert("Registered Successfully");
